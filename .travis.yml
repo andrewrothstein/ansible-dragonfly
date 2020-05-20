@@ -1,0 +1,28 @@
+branches:
+  except:
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+dist: xenial
+env:
+- OS=alpine_3.10
+- OS=alpine_3.11
+- OS=alpine_edge
+- OS=archlinux_latest
+- OS=centos_7
+- OS=centos_8
+- OS=debian_buster
+- OS=debian_stretch
+- OS=fedora_31
+- OS=fedora_32
+- OS=ubi8_8.0
+- OS=ubi8_8.1
+- OS=ubuntu_xenial
+- OS=ubuntu_bionic
+language: python
+python: 3.7
+script:
+- ansible-galaxy-local-deps-write
+- dcb --upstreamgroup andrewrothstein --upstreamapp docker-ansible-role --pull ${OS}
+  --write ${OS} --build ${OS} --push ${OS}
+services:
+- docker
+sudo: required

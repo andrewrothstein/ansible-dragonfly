@@ -1,0 +1,14 @@
+---
+# defaults file for dragonfly
+dragonfly_ver: 1.0.1
+dragonfly_os: linux
+dragonfly_arch: amd64
+dragonfly_mirror: https://github.com/dragonflyoss/Dragonfly/releases/download
+dragonfly_parent_install_dir: /usr/local
+dragonfly_checksums:
+  # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.1/checksums.txt
+  '1.0.1':
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.1/Dragonfly_1.0.1_darwin_amd64.tar.gz
+    darwin_amd64: sha256:71097b1bc3df0335cb0c0bf99b7bea7089c27547b556d4de40b01642cb7ca563
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.1/Dragonfly_1.0.1_linux_amd64.tar.gz
+    linux_amd64: sha256:fc05d3ef07a10eada6e0d59eb88fc7f2518e7cf921434b01ce4d4ca877d2ee21
