@@ -9,7 +9,7 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: check for install...
+- name: check for install in {{ dragonfly_install_dir }}
   become: yes
   stat:
     path: '{{ dragonfly_install_dir }}'
@@ -17,30 +17,30 @@
   register: dragonfly_binary
 - when: not dragonfly_binary.stat.exists
   block:
-    - name: download...
+    - name: downloading {{ dragonfly_url }}
       become: yes
       become_user: root
       get_url:
         url: '{{ dragonfly_url }}'
-        dest: /tmp/{{ dragonfly_tgz }}
+        dest: '{{ dragonfly_tmp_tgz }}'
         checksum: '{{ dragonfly_checksum }}'
         mode: 0644
-    - name: unarchive...
+    - name: unarchiving {{ dragonfly_tmp_tgz }} to {{ dragonfly_parent_install_dir }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ dragonfly_tgz }}
+        src: '{{ dragonfly_tmp_tgz }}'
         dest: '{{ dragonfly_parent_install_dir }}'
         creates: '{{ dragonfly_install_dir }}'
   always:
-    - name: cleanup...
+    - name: rm {{ dragonfly_tmp_tgz }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ dragonfly_tgz }}
+        path: '{{ dragonfly_tmp_tgz }}'
         state: absent
-- name: link
+- name: linking items in {{ dragonfly_install_dir }} to items in {{ dragonfly_parent_install_dir }}/bin
   become: yes
   become_user: root
   with_items:

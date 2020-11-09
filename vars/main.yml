@@ -3,6 +3,7 @@
 dragonfly_platform: '{{ dragonfly_os }}_{{ dragonfly_arch }}'
 dragonfly_name: Dragonfly_{{ dragonfly_ver }}_{{ dragonfly_platform }}
 dragonfly_tgz: '{{ dragonfly_name }}.tar.gz'
+dragonfly_tmp_tgz: /tmp/{{ dragonfly_tgz }}
 dragonfly_url: '{{ dragonfly_mirror }}/v{{ dragonfly_ver }}/{{ dragonfly_tgz }}'
 dragonfly_checksum: '{{ dragonfly_checksums[dragonfly_ver][dragonfly_platform] }}'
 dragonfly_install_dir: '{{ dragonfly_parent_install_dir }}/{{ dragonfly_name }}'

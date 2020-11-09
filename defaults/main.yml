@@ -1,6 +1,6 @@
 ---
 # defaults file for dragonfly
-dragonfly_ver: 1.0.4
+dragonfly_ver: 1.0.6
 dragonfly_os: linux
 dragonfly_arch: amd64
 dragonfly_mirror: https://github.com/dragonflyoss/Dragonfly/releases/download
@@ -18,3 +18,15 @@ dragonfly_checksums:
     darwin_amd64: sha256:768c6514ab473c17248ae4f61ee0daac513323066a2cd21bf264b7cc4fe1dd61
     # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.4/Dragonfly_1.0.4_linux_amd64.tar.gz
     linux_amd64: sha256:f84556e5be3ee4457a2f4efb7d59362eab56209be7a014358edaacdb7b63563f
+  # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.5/checksums.txt
+  '1.0.5':
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.5/Dragonfly_1.0.5_darwin_amd64.tar.gz
+    darwin_amd64: sha256:605ceb576af8ea4da6964d623d26f17fb2fed89aab8b47da46bda7cade2cc063
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.5/Dragonfly_1.0.5_linux_amd64.tar.gz
+    linux_amd64: sha256:2bcbc3e05526ca2a719091ac87f000beaefd81cea9ee9c5f10e547056365de78
+  # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.6/checksums.txt
+  '1.0.6':
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.6/Dragonfly_1.0.6_darwin_amd64.tar.gz
+    darwin_amd64: sha256:dd5a79572bd6d12fc66828eb6b7849deedbed4979142a13da6eabc2a353f1add
+    # https://github.com/dragonflyoss/Dragonfly/releases/download/v1.0.6/Dragonfly_1.0.6_linux_amd64.tar.gz
+    linux_amd64: sha256:ccecef03a7946881f4fb20e051c6e97a6f5b0903a4c5eb2af43a437866fef894
