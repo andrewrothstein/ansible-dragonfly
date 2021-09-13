@@ -1,6 +1,6 @@
 andrewrothstein.dragonfly
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-dragonfly.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-dragonfly)
+![Build Status](https://github.com/andrewrothstein/ansible-dragonfly/actions/workflows/build.yml/badge.svg)
 
 Installs [Dragonfly](https://d7y.io/)
 
